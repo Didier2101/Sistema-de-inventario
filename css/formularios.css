@@ -1,0 +1,66 @@
+.form-login{
+    width: 300px;
+    flex-direction: column;
+    max-width: 400px;
+}
+.btn-submit{
+    width: 100%;
+}
+.title-login{
+    margin-bottom: 20px;
+}
+
+.contenedor-formulario-agregar-producto{
+    width: 100%;
+    position: absolute;
+    background-color: var(--background);
+    z-index: 16;
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+
+    .formAgregarProducto{
+        background-color: var(--color-blanco);
+        width: 600px;
+
+        .title-form{
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--color-azul);
+        }
+
+        .flex-form{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
+            input{
+                width: 100%;
+            }
+        }
+
+        .contenedor-btn-form{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+            .btn-add{
+                width: 200px;
+            }
+            .btn-cancelar{
+                background-color: red;
+            }
+            .btn-cancelar:hover{
+                background-color: rgb(216, 0, 0);
+            }
+        }
+    }
+  }

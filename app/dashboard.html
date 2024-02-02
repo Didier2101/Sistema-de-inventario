@@ -1,0 +1,171 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Agrega este enlace a SweetAlert2 en tu HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://kit.fontawesome.com/33ecabbdaa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container-section-dash">
+        <section class="section-menu flex" id="section-menu">
+          <ul class="ul-list box-shadow-1 br-6">
+            <li class="item flex">
+              <i class="icon font-1_4 fa-brands fa-product-hunt"></i>
+              <a class="link" href="./dashboard.html">Productos</a>
+            </li>
+            <li class="item flex">
+              <i class="fa-solid icon font-1_4 fa-user-nurse"></i>
+              <a class="link" href="./trabajadores.html">Empleados</a>
+            </li>
+            <li class="item flex">
+              <i class="fa-solid icon font-1_4 fa-user"></i>
+              <a class="link" href="./usuarios.html">Usuarios</a>
+            </li>
+            <li class="item flex">
+              <i class="fa-brands icon font-1_4 fa-intercom"></i>
+              <a class="link" href="./clientes.html">Clientes</a>
+            </li>
+            <li class="item flex">
+              <i class="icon fa-solid font-1_4 fa-tag"></i>
+              <a class="link" href="./provedores.html">Provedores</a>
+            </li>
+            <li class="item flex">
+              <i class="icon fa-solid font-1_4 fa-briefcase"></i>
+              <a class="link" href="./ventas.html">Ventas</a>
+            </li>
+          </ul>
+          <!-- <div class="div">
+                <a href="../../index.html">salir</a>
+              </div> -->
+        </section>
+
+        <section class="section-dashboard">
+      
+            <div class="header-dashboard flex">
+              <div class="contenedor-buscar flex pd-10 br-6 box-shadow-1 mb-10">
+                <h3>Buscar</h3>
+                <input class="br-6" id="input-buscar" type="text" />
+              </div>
+              <button
+                class="btnMostrarFormAdd btn btn-h-b br-6 font-1_1"
+                id="btn-mostrar-form-agregar"
+              >
+                Agregar
+              </button>
+            </div>
+            <h2 class="title-lista font-1_8 mb-10">Lista de productos</h2>
+            <div class="contenedor-tabla br-6 box-shadow-1">
+              <table class="tabla">
+                <thead class="header-table">
+                  <tr>
+                    <th class="cell">#</th>
+                    <th class="cell">Id</th>
+                    <th class="cell">Categoria</th>
+                    <th class="cell">Referencia</th>
+                    <th class="cell">Nombre</th>
+                    <th class="cell">Descripcion</th>
+                    <th class="cell">Precio</th>
+                    <th class="cell">Marca</th>
+                    <th class="cell">Stock</th>
+                    <th class="cell">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla-body">
+                  <!-- El contenido de la tabla se generará dinámicamente aquí -->
+                </tbody>
+              </table>
+            </div>
+        
+        </section>
+        <div class="contenedor-formulario-agregar-producto" id="contenedor-formulario-agregar-producto">
+          <form class="formAgregarProducto pd-20 box-shadow-1 br-6" id="form_agregar_producto">
+            <h2 class="title-form">Agregar Producto</h2>
+            <input type="hidden" name="indiceProductoAdd" />
+           
+             <div class="flex-form">
+              <label for="">
+                Categoria
+                <input
+                  type="text"
+                  class="inputAdd border_radius"
+                  name="categoriaAdd"
+                />
+              </label>
+          
+          
+                <label for="">
+                  Referencia
+                  <input
+                    type="text"
+                    class="inputAdd border_radius"
+                    name="referenciaAdd"
+                  />
+                </label>
+             </div>
+             <div class="flex-form">
+                  <label for="">
+                    Nombre
+                    <input
+                      type="text"
+                      class="inputAdd border_radius"
+                      name="nombreAdd"
+                    />
+                  </label>
+              
+                <label for="">
+                  Descripcion
+                  <input
+                    type="text"
+                    class="inputAdd border_radius"
+                    name="descripcionAdd"
+                  />
+                </label>
+             </div>
+             <div class="flex-form">
+                <label for="">
+                  Precio
+                  <input
+                    type="number"
+                    class="inputAdd border_radius"
+                    name="precioAdd"
+                  />
+                </label>
+            
+                <label for="">
+                  Marca
+                  <input
+                    type="text"
+                    class="inputAdd border_radius"
+                    name="marcaAdd"
+                  />
+                </label>
+             </div>
+             <label for="">
+                 Cantidad
+                 <input
+                 type="number"
+                 class="inputAdd border_radius"
+                 name="cantidadAdd"
+                 />
+             </label>    
+             <div class="contenedor-btn-form">
+               <button class="btn btn-add br-6 box-shadow-1 btn-h-b" >Aceptar</button>
+               <button class="btn btn-add btn-cancelar br-6 box-shadow-1" id="btnCancelarAddProducto">Cancelar</button>
+             </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="../js/index.js"></script>
+  </body>
+</html>
